@@ -1,0 +1,14 @@
+{
+  "vendor": "siman",
+  "name": "freight-bar",
+  "version": "0.0.1",
+  "builders": {
+    "store": "0.x",
+    "react": "3.x"
+  },
+  "scripts": {
+    "postreleasy": "vtex publish --verbose"
+  },
+  "dependencies": {},
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}
