@@ -1,0 +1,20 @@
+{
+  "extends": "@vtex/tsconfig",
+  "compilerOptions": {
+    "jsx": "react",
+    "noEmitOnError": false,
+    "typeRoots": ["node_modules/@types"],
+    "types": ["node", "jest"],
+    "lib": ["DOM"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "es2017"
+  },
+  "include": [
+    "./typings/*.d.ts",
+    "./**/*.tsx",
+    "./**/*.ts",
+    "CustomProductImages.js",
+    "components/ProductDescription/components/GradientCollapse.js"
+  ]
+}

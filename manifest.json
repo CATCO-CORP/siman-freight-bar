@@ -1,5 +1,5 @@
 {
-  "vendor": "siman",
+  "vendor": "simanqa",
   "name": "freight-bar",
   "version": "0.0.1",
   "builders": {
@@ -9,6 +9,11 @@
   "scripts": {
     "postreleasy": "vtex publish --verbose"
   },
-  "dependencies": {},
+  "dependencies": {
+    "vtex.order-manager": "0.x"
+  },
+  "devDependencies": {
+    "vtex.order-manager": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-manager@0.10.0/public/@types/vtex.order-manager"
+  },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

@@ -1,5 +1,13 @@
 {
     "freight-bar": {
-        "component": "FreightBar"
+        "component": "FreightBar",
+        "allowed": "*",
+        "content": {
+            "properties": {
+                "links": {
+                    "$ref": "app:simanqa.freight-bar#/definitions/FreightBar"
+                }
+            }
+        }
     }
 }
