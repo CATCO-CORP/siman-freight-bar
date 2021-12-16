@@ -60,7 +60,9 @@ function FreightBar({ promotionId }: IProps) {
   return (
     <div className={styles.shippingContent}>
       <span className={styles.shippingContentTitle}>
-        {loading ? "Cargando..." : `Compra mínima de $${FREIGHT_VALUE}`}
+        {loading
+          ? "Cargando..."
+          : `Compra mínima de $${FREIGHT_VALUE} para envío gratis.`}
       </span>
       <div className={styles.progressBar}>
         <div
