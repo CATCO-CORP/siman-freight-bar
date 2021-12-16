@@ -18,7 +18,10 @@ function FreightBar({ promotionId }: IProps) {
   const totalizerItems: number[] = orderForm.totalizers.map((items: any) =>
     items.id != "Shipping" ? items.value : 0
   );
-  const value = totalizerItems.reduce((total, value) => (total += value));
+  const value =
+    totalizerItems.length > 0
+      ? totalizerItems.reduce((total, value) => (total += value))
+      : 0;
 
   //useState
   const [promotionDataPromisse, setPromotionDataPromisse] =

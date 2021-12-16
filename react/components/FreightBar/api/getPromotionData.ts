@@ -11,8 +11,6 @@ const getPromotionData = async (PROMOTION_ID: String) => {
         .then(json => promotionData = json)
         .catch(err => console.error('error:' + err));
 
-    console.log("promotionData ", promotionData);
-
     return promotionData;
 }
 
