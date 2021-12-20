@@ -28,7 +28,7 @@ function FreightBar({ promotionId }: IProps) {
     useState<Promise<{}>>();
   const [loading, setLoading] = useState(true);
   const [promotionData, setPromotionData] = useState<IPromotionData>({});
-  const [FREIGHT_VALUE, setFreightValue] = useState(0);
+  const [FREIGHT_VALUE, setFreightValue] = useState<number | null>(null);
   const [progress, setProgress] = useState(0);
 
   //useEffect
@@ -38,22 +38,25 @@ function FreightBar({ promotionId }: IProps) {
   useEffect(() => {
     if (promotionDataPromisse) {
       promotionDataPromisse.then((data) => {
-        setLoading(false);
         setPromotionData(data);
       });
     }
   }, [promotionDataPromisse]);
   useEffect(() => {
-    let freightValue = 0;
+    let freightValue = null;
 
-    if (promotionData.totalValueFloor)
+    if (promotionData.totalValueFloor) {
       freightValue = promotionData.totalValueFloor;
+      setLoading(false);
+    }
 
     setFreightValue(freightValue);
   }, [promotionData]);
   useEffect(() => {
-    const progress = value / FREIGHT_VALUE;
-    setProgress(progress);
+    if (FREIGHT_VALUE) {
+      const progress = value / FREIGHT_VALUE;
+      setProgress(progress);
+    }
   }, [value, FREIGHT_VALUE]);
 
   //
