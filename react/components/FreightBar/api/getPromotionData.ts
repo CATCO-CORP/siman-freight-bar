@@ -1,9 +1,17 @@
 const getPromotionData = async (PROMOTION_ID: String) => {
     let promotionData = {};
     const url = `/api/rnb/pvt/calculatorconfiguration/${PROMOTION_ID}`;
+
+    const header = {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json; charset=utf-8',
+        'x-vtex-api-appKey': 'vtexappkey-siman-AXLYEH',
+        'x-vtex-api-appToken': 'GVCBIMZPYSACPBYDLFTFOFVKBUMLHOPHZWTXDCBDHEDXFKTQGVPDLRIAZSZNAOIJCSDTHBAIEPXJCXFRBWELYMWHOSXLCODTWTUMGZIFVHZWUZYCMIMDJWKQWWFODOGQ'
+    };
+
     const options = {
         method: 'GET',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' }
+        headers: header
     };
 
     await fetch(url, options)
