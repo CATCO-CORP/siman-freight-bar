@@ -5,8 +5,8 @@ const getPromotionData = async (PROMOTION_ID: String) => {
     const header = {
         'Accept': 'application/json',
         'Content-Type': 'application/json; charset=utf-8',
-        'x-vtex-api-appKey': 'vtexappkey-siman-AXLYEH',
-        'x-vtex-api-appToken': 'GVCBIMZPYSACPBYDLFTFOFVKBUMLHOPHZWTXDCBDHEDXFKTQGVPDLRIAZSZNAOIJCSDTHBAIEPXJCXFRBWELYMWHOSXLCODTWTUMGZIFVHZWUZYCMIMDJWKQWWFODOGQ'
+        'x-vtex-api-appKey': 'vtexappkey-simanqa-GPTOSK',
+        'x-vtex-api-appToken': 'UZYMGCVGGKUUCVYKCZTZQYLLJTCOXIADEFYBBXQJIZFMUBINSWAWUFIVOMDNZHJXKRQXXXJEJJRRTYQHKPWBIEIYWCNOUDKBPHBDKLQVMWNKORCPWVCKKIPFIRAVJVKG'
     };
 
     const options = {
