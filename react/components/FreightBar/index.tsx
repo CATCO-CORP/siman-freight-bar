@@ -67,21 +67,25 @@ function FreightBar({ promotionId }: IProps) {
   };
 
   return (
-    <div className={styles.shippingContent}>
-      <span className={styles.shippingContentTitle}>
-        {loading
-          ? "Cargando..."
-          : `Compra mínima de $${FREIGHT_VALUE} para envío gratis.`}
-      </span>
-      <div className={styles.progressBar}>
-        <div
-          className={` ${styles.progress} ${progressClassName()} `}
-          style={{ width: `${progress}%` }}
-        >
-          ${(value / 100).toFixed(2)}
+    <>
+      {loading ? (
+        <div />
+      ) : (
+        <div className={styles.shippingContent}>
+          <span className={styles.shippingContentTitle}>
+            Compra mínima de ${FREIGHT_VALUE} para envío gratis.
+          </span>
+          <div className={styles.progressBar}>
+            <div
+              className={` ${styles.progress} ${progressClassName()} `}
+              style={{ width: `${progress}%` }}
+            >
+              ${(value / 100).toFixed(2)}
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      )}
+    </>
   );
 }
 
