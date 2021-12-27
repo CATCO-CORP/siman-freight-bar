@@ -7,6 +7,7 @@ import { FREIGHT_BAR_SCHEMA } from "./config/schema";
 
 interface IPromotionData {
   totalValueFloor?: number;
+  isActive?: boolean;
 }
 interface IProps {
   promotionId: String;
@@ -43,14 +44,16 @@ function FreightBar({ promotionId }: IProps) {
     }
   }, [promotionDataPromisse]);
   useEffect(() => {
-    let freightValue = null;
+    if (promotionData.isActive) {
+      let freightValue = null;
 
-    if (promotionData.totalValueFloor) {
-      freightValue = promotionData.totalValueFloor;
-      setLoading(false);
+      if (promotionData.totalValueFloor) {
+        freightValue = promotionData.totalValueFloor;
+        setLoading(false);
+      }
+
+      setFreightValue(freightValue);
     }
-
-    setFreightValue(freightValue);
   }, [promotionData]);
   useEffect(() => {
     if (FREIGHT_VALUE) {
