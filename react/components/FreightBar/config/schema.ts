@@ -4,8 +4,10 @@ export const FREIGHT_BAR_SCHEMA = {
     type: "object",
     properties: {
         promotionId: {
+            title: "Promotion ID",
+            description: "Promotion ID",
             type: "string",
-            title: "Promotion ID"
+            default: "c6bf4e00-63b4-4ae9-8157-00bade31e3e7"
         },
     },
 };
