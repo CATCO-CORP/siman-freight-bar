@@ -1,2 +1,2 @@
 
-export const PROMOTION_ID = "18f3818f-5475-4c76-b7c9-7d67801adb75"; // Get PromotionID using this API: https://developers.vtex.com/vtex-rest-api/reference/promotions#getallbenefits
+export const PROMOTION_ID = "be8d0917-e37b-4a24-bcbd-16242db3ed5c"; // Get PromotionID using this API: https://developers.vtex.com/vtex-rest-api/reference/promotions#getallbenefits
