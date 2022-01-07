@@ -1,7 +1,7 @@
 {
   "vendor": "simanqa",
   "name": "freight-bar",
-  "version": "0.0.200",
+  "version": "0.0.201",
   "builders": {
     "store": "0.x",
     "react": "3.x"
