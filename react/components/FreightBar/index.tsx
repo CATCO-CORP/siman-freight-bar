@@ -4,6 +4,7 @@ import { useOrderForm } from "vtex.order-manager/OrderForm";
 import { PROMOTION_ID } from "./config/const";
 import getPromotionData from "./api/getPromotionData";
 import { FREIGHT_BAR_SCHEMA } from "./config/schema";
+import usePriceFormarter from "../hooks/usePriceFormarter";
 
 interface IPromotionData {
   totalValueFloor?: number;
@@ -14,6 +15,7 @@ interface IProps {
 }
 
 function FreightBar({ promotionId }: IProps) {
+  const { formatPrice } = usePriceFormarter();
   const ID = promotionId ? promotionId : PROMOTION_ID;
   const { orderForm } = useOrderForm();
   const totalizerItems: number[] = orderForm.totalizers.map((items: any) =>
@@ -76,14 +78,14 @@ function FreightBar({ promotionId }: IProps) {
       ) : (
         <div className={styles.shippingContent}>
           <span className={styles.shippingContentTitle}>
-            Compra mínima de ${FREIGHT_VALUE} para envío gratis.
+            Compra mínima de {formatPrice(FREIGHT_VALUE)} para envío gratis.
           </span>
           <div className={styles.progressBar}>
             <div
               className={` ${styles.progress} ${progressClassName()} `}
               style={{ width: `${progress}%` }}
             >
-              ${(value / 100).toFixed(2)}
+              {formatPrice(value / 100)}
             </div>
           </div>
         </div>
