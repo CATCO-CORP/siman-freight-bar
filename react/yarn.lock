@@ -471,10 +471,6 @@ react@^16.12.0:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
 
-"simanqagt.freight-bar@https://leo--simanqagt.myvtex.com/_v/private/typings/linked/v1/simanqagt.freight-bar@0.0.18+build1641573253/public/@types/simanqagt.freight-bar":
-  version "0.0.18"
-  resolved "https://leo--simanqagt.myvtex.com/_v/private/typings/linked/v1/simanqagt.freight-bar@0.0.18+build1641573253/public/@types/simanqagt.freight-bar#b1a13814e416d5de29e35c66770a0f86e90152a1"
-
 style-loader@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/style-loader/-/style-loader-3.3.1.tgz#057dfa6b3d4d7c7064462830f9113ed417d38575"
